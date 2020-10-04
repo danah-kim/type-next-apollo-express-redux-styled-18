@@ -3,8 +3,8 @@ import 'regenerator-runtime/runtime';
 
 import { ApolloProvider } from '@apollo/client';
 import GlobalStyles from 'GlobalStyles';
-import useApollo from 'hooks/useApollo';
-import useStore from 'hooks/useStore';
+import useApollo from 'lib/hooks/useApollo';
+import useStore from 'lib/hooks/useStore';
 import i18next from 'lib/i18n';
 import supportLanguages from 'lib/language';
 import 'normalize.css';

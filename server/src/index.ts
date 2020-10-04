@@ -1,6 +1,7 @@
 import schema from './graphql/schema';
 
 import { ApolloServer } from 'apollo-server-express';
+import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
@@ -23,6 +24,8 @@ app.use(morgan(dev ? 'dev' : 'combined'));
 app.use(helmet({ contentSecurityPolicy: dev ? false : undefined }));
 app.set('trust proxy', true);
 app.disable('x-powered-by');
+app.use(bodyParser.json({ limit: '5mb' }));
+app.use(bodyParser.urlencoded({ limit: '5mb', extended: true }));
 app.use(server.getMiddleware({ cors: false }));
 
 const running = app.listen(port, () => {

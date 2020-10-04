@@ -31,12 +31,12 @@ export type User = {
 };
 
 export const USER_QUERY = gql`
-    query UserQuery($id: Int!) {
-        user(id: $id) {
-            email
-            name
-        }
+  query UserQuery($id: Int!) {
+    user(id: $id) {
+      email
+      name
     }
+  }
 `;
 
 export type GetUserResponse = {
