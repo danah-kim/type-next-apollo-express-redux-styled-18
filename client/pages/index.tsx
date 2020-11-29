@@ -2,9 +2,8 @@ import { useQuery } from '@apollo/client';
 import Layout from 'components/Layout';
 import { GetUserResponse, USER_QUERY } from 'graphql/user';
 import initializeApollo from 'lib/apollo';
-import useTypedSelector from 'lib/hooks/useTypedSelector';
 import i18next from 'lib/i18n';
-import React from 'react';
+import { useSelector } from 'react-redux';
 import { initializeStore, userActions } from 'store';
 import styled from 'styled-components';
 
@@ -126,7 +125,7 @@ const Logo = styled.img`
 `;
 
 function Home() {
-  const { name } = useTypedSelector((state) => state.user);
+  const { name } = useSelector((state: RootState) => state.user);
   const { data } = useQuery<GetUserResponse>(USER_QUERY, { variables: { id: 2 } });
 
   if (data?.user) {

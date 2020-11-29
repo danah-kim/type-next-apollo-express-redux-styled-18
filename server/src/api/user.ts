@@ -31,8 +31,8 @@ export const getUser = async (id: number) => {
   const { data }: AxiosResponse<User[]> = await axios(USER_LIST_URL, {
     method: 'get',
     params: {
-      id
-    }
+      id,
+    },
   });
 
   return data[0];

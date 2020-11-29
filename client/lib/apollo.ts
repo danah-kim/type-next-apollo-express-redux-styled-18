@@ -3,7 +3,6 @@ import { ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject } from '@a
 let apolloClient: ApolloClient<NormalizedCacheObject>;
 
 function createApolloClient() {
-
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({

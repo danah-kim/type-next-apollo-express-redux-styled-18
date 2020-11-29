@@ -23,7 +23,7 @@ export const resolvers: IResolvers = {
 
 const schema: GraphQLSchema = makeExecutableSchema({
   typeDefs: [typeDef, user.typeDef],
-  resolvers: merge(resolvers, user.resolvers)
+  resolvers: merge(resolvers, user.resolvers),
 });
 
 export default schema;

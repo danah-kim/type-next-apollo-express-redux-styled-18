@@ -26,12 +26,12 @@ const user = createSlice({
 
 const selectLoadingState = createSelector<UserState, UserState['isLoading'], UserState['isLoading']>(
   (state) => state.isLoading,
-  (isLoading) => isLoading,
+  (isLoading) => isLoading
 );
 
 const selectName = createSelector<UserState, UserState['name'], UserState['name']>(
   (state) => state.name,
-  (name) => name,
+  (name) => name
 );
 
 const selectAllState = createSelector(selectLoadingState, selectName, (isLoading, name) => {

@@ -8,7 +8,7 @@ import useStore from 'lib/hooks/useStore';
 import i18next from 'lib/i18n';
 import supportLanguages from 'lib/language';
 import 'normalize.css';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import theme from 'styles/theme';
